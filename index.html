@@ -15,10 +15,43 @@
    <div class="home">
 
         <div class="header">
-          
-                <a class="header__link" href="https://sites.google.com/view/ihavenever-privacy/home">Privicy Policy</a>
-                <a class="header__link" id="header__link" href="#">app-ads</a>
-          
+            <a class="header__link" id="header__link1" href="">Privicy Policy</a>
+            <a class="header__link" id="header__link" href="">app-ads</a>
+        </div>
+
+
+        <p id="main__text" class="main__text">google.com, pub-9129444068310982, DIRECT, f08c47fec0942fa0</p>
+
+        <div id="container" class="container">
+            <p class="highlight">Privacy Policy</p>
+            <p class="description m-1"><span class="descr">**Privacy Policy</span> for  I Have Never Service**</p>
+            <p class="description m-2">This Service is provided by I Have Never at no cost and is intended for use as-is. This page aims to inform visitors about our policies regarding the collection, use, and disclosure of Personal Information for those who choose to use our Service.</p>
+            <p class="description m-2">By using our Service, you agree to the collection and use of information as outlined in this policy. The Personal Information we collect is used to provide and improve the Service. We will not use or share your information with anyone except as described in this Privacy Policy.</p>
+            <p class="description m-2">The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which are accessible at I Have Never, unless otherwise defined in this Privacy Policy.</p>
+            <p class="description m-2 descr">**Cookies**</p>
+            <p class="description m-2">Cookies are small data files that serve as anonymous unique identifiers. They are sent to your browser from websites you visit and stored on your device’s internal memory.</p>
+            <p class="description m-2">This Service does not explicitly use cookies. However, the app may include third-party code and libraries that use cookies to collect information and enhance their services. You can choose to accept or refuse these cookies and be notified when a cookie is sent to your device. Refusing cookies may limit access to certain portions of this Service.</p>
+            <p class="description m-2 descr">**Service Providers**</p>
+            <p class="description m-2">We may employ third-party companies and individuals to:</p>
+            <p class="description m-3">- Facilitate our Service;</p>
+            <p class="description m-3">- Provide the Service on our behalf;</p>
+            <p class="description m-3">- Perform Service-related functions; or</p>
+            <p class="description m-3">- Help us analyze how our Service is used.</p>
+            <p class="description m-2">These third parties may have access to your Personal Information to perform their tasks. However, they are obligated to keep this information confidential and use it only for the purposes of their tasks.</p>
+            <p class="description m-2">We value your trust in providing us with your Personal Information and strive to use commercially acceptable means to protect it. However, please be aware that no method of transmission over the internet or electronic storage is completely secure, and we cannot guarantee absolute security.</p>
+            <p class="description m-2 descr">**Information Collection and Use**</p>
+            <p class="description m-2">To enhance your experience while using our Service, we may ask you to provide certain personally identifiable information. This information will be stored on your device and not collected by us in any way.</p>
+            <p class="description m-2">However, the app uses third-party services that may collect information to identify you. Below are links to the privacy policies of the third-party service providers used by the app:</p>
+            <p class="description m-3">- AppHud</p>
+            <p class="description m-3">- Amplitude</p>
+            <p class="description m-2 descr">**Links to Other Sites**</p>
+            <p class="description m-2">This Service may contain links to external websites. If you click on a third-party link, you will be directed to that site. Please note that these external sites are not under our control. We strongly recommend reviewing the Privacy Policy of any website you visit. We are not responsible for the content, privacy policies, or practices of any third-party sites or services.</p>
+            <p class="description m-2 descr">**Children’s Privacy**</p>
+            <p class="description m-2">Our Services are not intended for individuals under the age of 17. We do not knowingly collect personally identifiable information from children under 17 years old. If we become aware that a child under 17 has provided us with personal information, we will promptly delete it from our servers. If you are a parent or guardian and believe your child has shared personal information with us, please contact us so that we can take the necessary actions.</p>
+            <p class="description m-2 descr">**Changes to This Privacy Policy**</p>
+            <p class="description m-2">We may update our Privacy Policy occasionally. We recommend reviewing this page periodically to stay informed about any changes. We will notify you of any updates by posting the revised Privacy Policy on this page.</p>
+            <p class="description m-2">This policy is effective as of August 2024.</p>
+            
         </div>
     </div>
 
@@ -26,15 +59,36 @@
  
 
   <script>
-    let link = document.getElementById('header__link');
-    
-    link.addEventListener('click', function() {
 
-        window.location.href = "add-ads.html";
-            
     
+
   
+    let main__text = document.getElementById("main__text")
+    let container = document.getElementById("container")
+
+       
+    
+    
+    let first__link = document.getElementById("header__link1")
+    let link = document.getElementById("header__link")
+  
+    first__link.addEventListener('click', function(event) { 
+        event.preventDefault();
+        window.history.replaceState(null, '', "/");
+        console.log(main__text)
+        main__text.style.opacity = "0"
+        container.style.opacity ="1"
+    })
+
+    link.addEventListener('click', function(event) { 
+        event.preventDefault();
+        window.history.replaceState(null, '', "app-ads.txt");
+
+        main__text.style.opacity = "1"
+        container.style.opacity ="0"
     });
+
+
 
   </script>
   
